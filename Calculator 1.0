@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int numberOne = 0;
+    int numberTwo = 0;
+    //two numbers are chosen below by the user
+    cout << "What is your first number?\n";
+    cout << ">> ", cin >> numberOne;
+    cout << "2nd number?\n"; 
+    cout << ">> ";
+    cin >> numberTwo;
+    //the operator is chosen below
+    cout << "\n";
+    cout << "... Here's the outputs ... \n";
+    cout << "\n ";
+    cout << numberOne << " + " << numberTwo << " = " << " " << numberOne + numberTwo << "\n ";
+    cout << numberOne << " - " << numberTwo  << " = "  << " " << numberOne - numberTwo << "\n ";
+    cout << numberOne << " * " << numberTwo << " = " << " " << numberOne * numberTwo << "\n ";
+    cout << numberOne << " / " << numberTwo << " = " << " " << numberOne / numberTwo;
+    cout << " R " << numberOne % numberTwo << "\n ";
+    return 0;
+}
