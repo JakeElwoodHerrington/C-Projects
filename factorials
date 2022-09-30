@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int onlyNum;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+    cout << "Factorial cal-cu-malaytor\n";
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
+
+    cout << "Enter a integer\n";
+    cout << ">> ";
+    cin >> onlyNum;
+
+    for (int i = onlyNum, i)
+        cout << onlyNum << "! = " << i; ;
+}
+
