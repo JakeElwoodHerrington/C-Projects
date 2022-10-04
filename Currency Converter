@@ -1,0 +1,44 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+float currencyOne;
+int chooseType;
+float funnyEuropeanCurrency;
+
+int main()
+{
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~\n";
+    cout << "  Currency Converter\n";
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~\n\n\n";
+    
+    
+    cout << "Enter the amount of money you want to convert (assumed USD, cause you live in the US). \n";
+    cout << ">> ";
+    cin >> currencyOne;
+    cout << "You entered: " << fixed << setprecision(2) << currencyOne << " Burger Bucks" << endl << endl;
+
+        cout << "What currency do you want to convert?\n";
+        cout << "1. Euros\n";
+        cout << "2. Australlian Kangaroos\n";
+        cout << "3. Galactic Standard Credits\n\n";
+        cout << ">> ", cin >> chooseType;
+
+        switch (chooseType) {
+        case 1:
+            cout << "That is " << currencyOne * 1.04 << " Euros. " << endl;
+            break;
+        case 2:
+            cout << "Oi that is " << currencyOne * 1.56 << " Aussie Kangaroos" << endl;
+            break;
+        case 3:
+            cout << "Rodger Rodger, that is " << currencyOne * 1.44 << " galactic credits " << endl;
+            break;
+        default: 
+            cout << "... C'mon dude it's three numbers how did you mess that up?\n";
+            break;
+        }
+
+        // This code is more accurate than the official Google currency conversion. Where's my job, Google?
+}
