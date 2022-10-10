@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double numberOne;
+    double numberTwo;
+    int opChosen;
+
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+    cout << "    Calcumalaytor too point o\n";
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
+
+    cout << "What is your first number?\n";
+    cout << ">> ", cin >> numberOne;
+    cout << "What is your second number?\n";
+
+    cout << ">> ";
+    cin >> numberTwo;
+
+    cout << "What is the operation you want to use?\n\n";
+    cout << "1. Addition\n";
+    cout << "2. Subtraction\n";
+    cout << "3. Multiplication\n";
+    cout << "4. Division\n\n";
+
+    cout << ">> ";
+    cin >> opChosen;
+
+    //the operator is chosen below
+
+    switch (opChosen)
+    {
+        case 1: 
+            cout << numberOne << " + " << numberTwo << " = " << " " << numberOne + numberTwo << "\n ";
+            break;
+        case 2:
+            cout << numberOne << " - " << numberTwo << " = " << " " << numberOne - numberTwo << "\n ";
+            break;
+        case 3:
+            cout << numberOne << " * " << numberTwo << " = " << " " << numberOne * numberTwo << "\n ";
+            break;
+        case 4:
+            if (numberTwo == 0) {
+                cout << "Uh, no. Don't even try it.\n\n";
+                break;
+            }
+            cout << numberOne << " / " << numberTwo << " = " << " " << numberOne / numberTwo << "\n";  
+            break;
+        default: 
+            cout << "Invalid choice, chucklenuts.\n\n"; 
+            break;
+    }
+        return 0;
+}
