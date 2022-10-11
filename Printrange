@@ -16,14 +16,14 @@ int main()
 	// User inputs the number below
 	cout << "Enter beginning number\n";
 	cout << ">> "; cin >> startNum;
-	if (!cin) {
+	if (!cin) { // If input is not recognized, spit out error.
 		cout << "Error! Input is not recognized as integer!\n\n";
 	}
 	else {
 		cout << "Enter ending number\n";
 		cout << ">> "; cin >> endNum;
-		if (!cin) {
-			cout << "Error! Input is not recognized as integer!\n\n";
+		if (!cin) { // If input is not recognized, spit out error. 
+			cout << "Error! Input is not recognized as integer.\n\n";
 		}
 		else {
 
