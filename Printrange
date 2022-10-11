@@ -6,21 +6,26 @@ int i;
 
 int main()
 {
+	cout << "~~~~~~~~~~~~~~~\n";
+	cout << "  Print Range\n";
+	cout << "~~~~~~~~~~~~~~~\n\n";
 	cout << "Enter beginning number\n";
 	cout << ">> "; cin >> startNum;
 	cout << "Enter ending number\n";
 	cout << ">> "; cin >> endNum;
 
-	if (endNum > startNum) {
-		cout << "Error: ending number bigger than starting number!"
+	if (endNum < startNum) {
+		cout << "Error: ending number bigger than starting number!\n\n";
 	}
-
+	else if (startNum == endNum) {
+		cout << "That's the same number.\n\n";
+	}
 	else {
+		cout << "Here's the range of numbers:\n\n";
 		for (i = startNum; i <= endNum; i++) {
-			cout << i << ",";
+			cout << "> " << i << endl;
 
 		}
 	}
-	}
-
+}
 
