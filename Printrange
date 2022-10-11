@@ -1,31 +1,39 @@
 #include <iostream>
 using namespace std;
+
+// Variables
 int startNum;
 int endNum;
 int i;
 
 int main()
 {
+	// Menu text to look fancy.
 	cout << "~~~~~~~~~~~~~~~\n";
 	cout << "  Print Range\n";
 	cout << "~~~~~~~~~~~~~~~\n\n";
+
+	// User inputs the number below
 	cout << "Enter beginning number\n";
 	cout << ">> "; cin >> startNum;
 	cout << "Enter ending number\n";
 	cout << ">> "; cin >> endNum;
 
-	if (endNum < startNum) {
+	if (endNum < startNum) {  // If user enters a bigger ending number than the starting number, it gives an error.
 		cout << "Error: ending number bigger than starting number!\n\n";
 	}
-	else if (startNum == endNum) {
-		cout << "That's the same number.\n\n";
+	else if (startNum == endNum) { // If user inputs same number twice, it prints this
+		cout << "That's the same number. Your range is just " << startNum << ".\n\n";
 	}
-	else {
+	else { // If everything is entered properly by user, it prints the range.
 		cout << "Here's the range of numbers:\n\n";
 		for (i = startNum; i <= endNum; i++) {
 			cout << "> " << i << endl;
 
 		}
 	}
+}
+
+
 }
 
