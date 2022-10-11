@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int startNum;
+int endNum;
+int i;
+
+int main()
+{
+	cout << "Enter beginning number\n";
+	cout << ">> "; cin >> startNum;
+	cout << "Enter ending number\n";
+	cout << ">> "; cin >> endNum;
+
+	if (endNum > startNum) {
+		cout << "Error: ending number bigger than starting number!"
+	}
+
+	else {
+		for (i = startNum; i <= endNum; i++) {
+			cout << i << ",";
+
+		}
+	}
+	}
+
+
