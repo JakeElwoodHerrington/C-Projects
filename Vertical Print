@@ -10,6 +10,10 @@ void verticalPrint(string s) {
     }
 }
 
+string reverse(string s) {
+
+    return s;
+}
 
 int main()
 {
@@ -17,16 +21,13 @@ int main()
     cout << "Vertical Print & Reversal Program\n\n";
     cout << "Enter a string of words\n";
     cout << ">> ";
-    cin >> input;
+    getline(cin, input);
 
     cout << "Vertical Print\n\n";
     verticalPrint(input);
     cout << endl << endl;
+
     cout << "Reverse Print\n";
-
-
-
-}
 
 
 }
