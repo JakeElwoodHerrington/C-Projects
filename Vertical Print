@@ -11,7 +11,10 @@ void verticalPrint(string s) {
 }
 
 string reverse(string s) {
-
+    int n = s.length();
+    for (int i = n - 1; i >= 0; i--) { // When I started this, only god and I knew how it worked, now only god knows.
+        cout << s[i];
+    }
     return s;
 }
 
@@ -27,8 +30,9 @@ int main()
     verticalPrint(input);
     cout << endl << endl;
 
-    cout << "Reverse Print\n";
-
+    cout << "Reverse Print\n\n";
+    reverse(input);
+    cout << endl;
 
 }
 
