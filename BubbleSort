@@ -1,0 +1,36 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+
+int main()
+{
+	ifstream fin;
+	fin.open("presidents.txt");
+	string presidents[46];
+	ofstream fout;
+	fout << presidents << endl;
+	fout.open("presidents_sorted.txt");
+	
+
+	return 0;
+}
+
+void bubbleSort(string a[]) {
+	bool isSorted = false;
+
+	while (!isSorted) {
+		isSorted = true;
+	for (int i = 0; i < 45; i++) {
+		if (a[i].compare(a[i + 1]) > 0) {
+			string temp = a[i];
+			a[i] = a[i + 1];
+			a[i + 1] = temp;
+			isSorted = false;
+
+			}
+		}
+	}
+
+}
