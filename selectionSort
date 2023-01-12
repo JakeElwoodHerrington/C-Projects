@@ -1,0 +1,41 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+void selectionSort(string a[]) {
+	int minIndex;
+	for (int i = 0; i < 46; i++) {
+		minIndex = i;
+		for (int j = i + 1; j < 46; j++) {
+			if (a[j].compare(a[minIndex]) < 0) {
+				minIndex = j;
+				string temp = a[i];
+				a[i] = a[minIndex];
+				a[minIndex] = temp;
+				minIndex = i;
+			}
+
+		}
+	}
+}
+
+int main()
+{
+	string presidents[46];
+	ifstream fin;
+	ofstream fout;
+	fin.open("presidents.txt");
+	fout.open("presidents_sorted.txt");
+	for (int i = 0; i < 46; i++) {
+		getline(fin, presidents[i]); // ANGER :((((
+	}
+	selectionSort(presidents);
+	for (int i = 0; i < 46; i++) {
+		fout << presidents[i] << endl;
+	}
+
+
+	return 0;
+}
