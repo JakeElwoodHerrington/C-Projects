@@ -1,0 +1,44 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+void insertionSort(string a[]) {
+	for (int i = 1; i < 46; i++) {
+		for (int j = i; j > 0 && a[j].compare(a[j - 1]) < 0; j--) { 
+			string temp = a[j];
+			a[j] = a[j - 1];
+			a[j - 1] = temp;
+		}
+	}
+}
+
+int binarySearch(string a[], string s, int size) {
+	int start = 0;
+	int end = size - 1;
+
+	while (start <= end) {
+		int mid = (start + end) / 2;
+
+	}
+} 
+
+int main()
+{
+	string presidents[46];
+	ifstream fin;
+	ofstream fout;
+	fin.open("presidents.txt");
+	fout.open("presidents_sorted.txt");
+	for (int i = 0; i < 46; i++) {
+		getline(fin, presidents[i]);
+	}
+	insertionSort(presidents);
+	for (int i = 0; i < 46; i++) {
+		fout << presidents[i] << endl;
+
+	
+}
+
+	return 0;
