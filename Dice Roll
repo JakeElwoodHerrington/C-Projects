@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int input = 1;
+    cout << "Dice Roll Generator\n\n";
+    while (input != 0) {
+        cout << "enter dice number to roll (0 = stop program)\n";
+        cout << ">> ";
+        cin >> input;
+        srand((int)time(0));
+        int s = rand() % input + 1;
+        cout << "You rolled: " << s << "\n";
+    }
+}
