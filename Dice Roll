@@ -4,15 +4,16 @@ using namespace std;
 
 int main() {
     string input;
+    int diceAmount;
+    int diceType;
+    int rollTotal;
+    
     cout << "Dice Roll Generator\n\n";
 
     cout << "enter dice in xdy form to roll (0d0 = stop program)\n";
     cout << ">> ";
-    getline(cin, input); // User enters xdy form
-
-    int diceAmount;
-    int diceType;
-    int rollTotal;
+    getline(cin, input, 'd'); // User enters xdy form
+    diceAmount = stoi(input);
 
     srand((int)time(0));
 
