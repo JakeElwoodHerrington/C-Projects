@@ -8,19 +8,19 @@ int main() {
     int diceType = 1;
 
     cout << "Dice Roll Generator\n\n";
-
-    cout << "enter dice in xdy form to roll (0d0 = stop program)\n";
-    cout << ">> ";
-    getline(cin, input, 'd'); // User enters xdy form
-    diceAmount = stoi(input);
-    diceType = stoi(input);
+        cout << "enter dice in xdy form to roll (0d0 = stop program)\n";
+        cout << ">> ";
+        getline(cin, input, 'd'); // User enters xdy form)
+        diceAmount = stoi(input);
+        getline(cin, input);
+        diceType = stoi(input);
 
     srand((int)time(0));
-
+    
     int rollTotal = 0;
     for (int i = 0; i < diceAmount; i++) {
-        int s = rand() % i + 1;
-        cout << "You rolled: " << i << ", \n";
+        int s = rand() % diceType + 1;
+        cout << "You rolled: " << s << ", \n";
         rollTotal += s;
 
 
