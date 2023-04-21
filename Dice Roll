@@ -1,31 +1,40 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 using namespace std;
 
 int main() {
     string input;
     int diceAmount = 1;
     int diceType = 1;
+    string plchdr;
 
     cout << "Dice Roll Generator\n\n";
-        cout << "enter dice in xdy form to roll (0d0 = stop program)\n";
-        cout << ">> ";
+    cout << "enter dice in xdy form to roll (0d0 = stop program)\n";
+    cout << ">> ";
+    while (true) {
         getline(cin, input, 'd'); // User enters xdy form)
         diceAmount = stoi(input);
         getline(cin, input);
         diceType = stoi(input);
+        plchdr = ()
+        if (plchdr == "0d0") {  // If the input is found to be 0d0, it ends the program
+            "App ended.";
+            break;
+        }
 
-    srand((int)time(0));
-    
-    int rollTotal = 0;
-    for (int i = 0; i < diceAmount; i++) {
-        int s = rand() % diceType + 1;
-        cout << "You rolled: " << s << ", \n";
-        rollTotal += s;
+        srand((int)time(0));
 
+        int rollTotal = 0;
+        for (int i = 0; i < diceAmount; i++) {
+            int s = rand() % diceType + 1; // user input that makes random roll; +1 fixes input
+            cout << "You rolled: " << s << ",\n"; // Shows individual rolls
+            rollTotal += s; // adds individual rolls to total
 
+        }
+
+        cout << "Total amount rolled: " << rollTotal << endl;  // gives total amount rolled
+        break; // ends loop (for 0d0 end seq.)
+        return 0;
     }
-    cout << "Total amount rolled: " << rollTotal << endl;
-
-    return 0;
 }
