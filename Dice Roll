@@ -17,7 +17,7 @@ int main() {
         diceAmount = stoi(input);
         getline(cin, input);
         diceType = stoi(input);
-        plchdr = ()
+        plchdr = ();
         if (plchdr == "0d0") {  // If the input is found to be 0d0, it ends the program
             "App ended.";
             break;
